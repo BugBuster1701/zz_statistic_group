@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php 
 
 /**
  * Contao Open Source CMS
@@ -21,9 +21,9 @@ if (isset($GLOBALS['BE_MOD']['system']['bannerstat']))
     unset($GLOBALS['BE_MOD']['system']['bannerstat']);
     $GLOBALS['BE_MOD']['statistics']['bannerstat'] = array
     (
-            callback => ModuleBannerStat,
-            icon => 'system/modules/banner/iconBannerStat.gif',
-            stylesheet => 'system/modules/banner/mod_banner_be.css'
+            callback   => 'Banner\ModuleBannerStat',
+            icon       => 'system/modules/banner/assets/iconBannerStat.gif',
+            stylesheet => 'system/modules/banner/assets/mod_banner_be.css'
     );
 }
 
@@ -33,9 +33,9 @@ if (isset($GLOBALS['BE_MOD']['system']['visitorstat']))
     unset($GLOBALS['BE_MOD']['system']['visitorstat']);
     $GLOBALS['BE_MOD']['statistics']['visitorstat'] = array
     (
-            'callback'   => 'ModuleVisitorStat',
-            'icon'       => 'system/modules/visitors/iconVisitor.png',
-            'stylesheet' => 'system/modules/visitors/mod_visitors_be.css'
+            'callback'   => 'Visitors\ModuleVisitorStat',
+            'icon'       => 'system/modules/visitors/assets/iconVisitor.png',
+            'stylesheet' => 'system/modules/visitors/assets/mod_visitors_be.css'
     );
 }
 
@@ -45,9 +45,9 @@ if (isset($GLOBALS['BE_MOD']['system']['botstatistics']))
     unset($GLOBALS['BE_MOD']['system']['botstatistics']);
     $GLOBALS['BE_MOD']['statistics']['botstatistics'] = array
     (
-            'callback'   => 'ModuleBotStatisticsStat',
-            'icon'       => 'system/modules/botstatistics/html/botstatistics2.png',
-            'stylesheet' => 'system/modules/botstatistics/html/mod_botstatistics_be.css',
+            'callback'   => 'BotStatistics\ModuleBotStatisticsStat',
+            'icon'       => 'system/modules/botstatistics/assets/botstatistics2.png',
+            'stylesheet' => 'system/modules/botstatistics/assets/mod_botstatistics_be.css',
     );
 }
 
@@ -58,11 +58,8 @@ if (isset($GLOBALS['BE_MOD']['content']['dlstats']))
     $GLOBALS['BE_MOD']['statistics']['dlstats'] = array
     (
             'tables'	 =>	array('tl_dlstats','tl_dlstatdets'),
-            'icon'		 =>	'system/modules/dlstats/html/icon.png',
-            'stylesheet' =>	'system/modules/dlstats/html/style.css'
+            'icon'		 =>	'system/modules/dlstats/assets/icon.png',
+            'stylesheet' =>	'system/modules/dlstats/assets/style.css'
     );
 }
 
-
-
-?>
