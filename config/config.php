@@ -1,17 +1,16 @@
 <?php 
 
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Contao Open Source CMS, Copyright (C) 2005-2013 Leo Feyer
  *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * PHP version 5
- * @copyright  Glen Langer 2012 
- * @author     Glen Langer 
+ * Contao  Module "zz_statistic_group"
+ * 
+ * @copyright  Glen Langer 2012..2013 <http://www.contao.glen-langer.de>
+ * @author     Glen Langer (BugBuster)
  * @package    Statistic_Group 
  * @license    LGPL 
  * @filesource
+ * @see	       https://github.com/BugBuster1701/zz_statistic_group
  */
 
 
@@ -63,3 +62,9 @@ if (isset($GLOBALS['BE_MOD']['content']['dlstats']))
     );
 }
 
+//config_top.php only found on GitHub
+if (file_exists(TL_ROOT . '/system/modules/zz_statistic_group/config/config_top.php') 
+ && is_readable(TL_ROOT . '/system/modules/zz_statistic_group/config/config_top.php')) 
+{
+    include(TL_ROOT . '/system/modules/zz_statistic_group/config/config_top.php');
+}
