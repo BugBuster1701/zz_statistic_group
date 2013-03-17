@@ -50,8 +50,8 @@ if (isset($GLOBALS['BE_MOD']['system']['botstatistics']))
     );
 }
 
-//Download
-if (isset($GLOBALS['BE_MOD']['content']['dlstats'])) 
+//Download, old dlstat
+if (isset($GLOBALS['BE_MOD']['content']['dlstats']['tables'])) 
 {
     unset($GLOBALS['BE_MOD']['content']['dlstats']);
     $GLOBALS['BE_MOD']['statistics']['dlstats'] = array
@@ -59,6 +59,17 @@ if (isset($GLOBALS['BE_MOD']['content']['dlstats']))
             'tables'	 =>	array('tl_dlstats','tl_dlstatdets'),
             'icon'		 =>	'system/modules/dlstats/assets/icon.png',
             'stylesheet' =>	'system/modules/dlstats/assets/style.css'
+    );
+}
+//Download, new dlstat
+if (isset($GLOBALS['BE_MOD']['content']['dlstats']['callback']))
+{
+    unset($GLOBALS['BE_MOD']['content']['dlstats']);
+    $GLOBALS['BE_MOD']['statistics']['dlstats'] = array
+    (
+            'callback'   => 'DLStats\ModuleDlstatsStatistics',
+            'icon'       => 'system/modules/dlstats/assets/icon.png',
+            'stylesheet' => 'system/modules/dlstats/assets/mod_dlstatsstatistics_be.css',
     );
 }
 
