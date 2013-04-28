@@ -20,7 +20,7 @@ if (isset($GLOBALS['BE_MOD']['system']['bannerstat']))
     unset($GLOBALS['BE_MOD']['system']['bannerstat']);
     $GLOBALS['BE_MOD']['statistics']['bannerstat'] = array
     (
-            callback   => 'Banner\ModuleBannerStat',
+            callback   => 'BannerStatistics\ModuleBannerStatistics',
             icon       => 'system/modules/banner/assets/iconBannerStat.gif',
             stylesheet => 'system/modules/banner/assets/mod_banner_be.css'
     );
