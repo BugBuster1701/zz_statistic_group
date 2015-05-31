@@ -1,13 +1,9 @@
 <?php 
 
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Contao Open Source CMS, Copyright (C) 2005-2015 Leo Feyer
  *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * PHP version 5
- * @copyright  Glen Langer 2012 
+ * @copyright  Glen Langer 2015 
  * @author     Glen Langer 
  * @package    Statistic_Group 
  * @license    LGPL 
